@@ -1,27 +1,20 @@
 {
     "math.AC": {
         "username": "mathACb",
-        "__comment": "0 for no abstracts, for example.",
+	"password": "xxxxxxxxxxxxxxxxxx",
         "newsubmissions": "1",
         "abstracts": "1",
         "crosslists": "1",
 	"quote_replacements": "1",
-	"retweet_replacements": "1",
-        "consumer_key": "xxxxxxxxxxxxxxxxxx",
-        "consumer_secret": "xxxxxxxxxxxxxxxxxx",
-        "access_token": "xxxxxxxxxxxxxxxxxx",
-        "access_token_secret": "xxxxxxxxxxxxxxxxxx"
+	"retweet_replacements": "1"
     },
     "math.AG": {
         "username": "mathAGb",
+	"password": "xxxxxxxxxxxxxxxxxx",
         "newsubmissions": "1",
         "abstracts": "1",
         "crosslists": "0",
 	"quote_replacements": "0",
-	"retweet_replacements": "0",
-        "consumer_key": "xxxxxxxxxxxxxxxxxx",
-        "consumer_secret": "xxxxxxxxxxxxxxxxxx",
-        "access_token": "xxxxxxxxxxxxxxxxxx",
-        "access_token_secret": "xxxxxxxxxxxxxxxxxx"
+	"retweet_replacements": "0"
     }
 }
