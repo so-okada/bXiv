@@ -8,10 +8,10 @@ with arXiv.
 
 ## Setup
 
-* Install pandas, ratelimit, atproto, nameparser, feedparser, and beautifulsoup4. 
+* Install atproto, pandas, ratelimit, atproto, nameparser, feedparser, and beautifulsoup4. 
 
 	```
-	% pip3 install pandas ratelimit atproto nameparser feedparser beautifulsoup4
+	% pip3 install atproto pandas ratelimit atproto nameparser feedparser beautifulsoup4
 	```
 
 * Let bXiv.py be executable.
