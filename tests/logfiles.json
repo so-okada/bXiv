@@ -1,6 +1,6 @@
 {
     "math.AC": {
-        "username": "mathac-bot.bsky.social",
+        "username": "xxx.bsky.social",
         "post_summary_log": "logfiles/mathac-bot_post_summaries.csv",
         "post_log": "logfiles/mathac-bot_posts.csv",
         "repost_log": "logfiles/mathac-bot_reposts.csv",
@@ -9,7 +9,7 @@
 	"quote_log": "logfiles/mathac-bot_quotes.csv"
     },
     "math.AG": {
-        "username": "mathag-bot.bsky.social",
+        "username": "xxx.bsky.social",
         "post_summary_log": "logfiles/mathag-bot_post_summaries.csv",
         "post_log": "logfiles/mathag-bot_posts.csv",
         "repost_log": "logfiles/mathag-bot_reposts.csv",
