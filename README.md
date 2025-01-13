@@ -374,10 +374,10 @@ This is an open-science practice (see
 https://github.com/so-okada/twXiv#motivation).  Since 2013-04, the
 author has been running twitter bots for all arXiv math categories 
 with [twXiv](https://github.com/so-okada/twXiv).
-Since 2023-01, the author has been running the mastodon bots above for
+Since 2023-01, the author has been running mastodon bots for
 all arXiv categories 
 with [toXiv](https://github.com/so-okada/toXiv). Since 2025-01, the author has been
-running the blusky bots above for all arXiv math categories 
+running the blusky bots for all arXiv math categories 
 with [bXiv](https://github.com/so-okada/bXiv).
 
 ## License
