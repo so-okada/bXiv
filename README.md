@@ -372,10 +372,13 @@ So Okada, so.okada@gmail.com, https://so-okada.github.io/
 ## Motivation
 This is an open-science practice (see
 https://github.com/so-okada/twXiv#motivation).  Since 2013-04, the
-author has been running twitter bots for all arXiv math categories.
+author has been running twitter bots for all arXiv math categories 
+with [twXiv](https://github.com/so-okada/twXiv).
 Since 2023-01, the author has been running the mastodon bots above for
-all arXiv categories with toXiv. Since 2025-01, the author has been
-running the blusky bots above for all arXiv math categories with bXiv.
+all arXiv categories 
+with [toXiv](https://github.com/so-okada/toXiv). Since 2025-01, the author has been
+running the blusky bots above for all arXiv math categories 
+with [bXiv](https://github.com/so-okada/bXiv).
 
 ## License
 [AGPLv3](https://www.gnu.org/licenses/agpl-3.0.en.html)
