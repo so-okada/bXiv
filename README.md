@@ -1,9 +1,8 @@
 # Application Info
 
-This application bXiv delivers arXiv daily new submissions, abstracts,
-cross-lists, and replacements by bluesky posts, repliles, and
-reposts. We use python3 scripts with atproto. bXiv is not affiliated
-with arXiv.
+bXiv delivers arXiv daily new submissions, abstracts, cross-lists, and
+replacements by bluesky posts, repliles, and reposts. We use python3
+scripts with atproto. bXiv is not affiliated with arXiv.
 
 
 ## Setup
