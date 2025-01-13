@@ -4,9 +4,9 @@
 arxiv_call_limit = 1
 arxiv_call_period = 5
 
-arxiv_max_trial = 4
-arxiv_call_sleep = 15 * 60
-main_thread_wait = 60
+arxiv_max_trial = 2
+arxiv_call_sleep = 5 * 60
+main_thread_wait = 10
 
 # max post length is 300
 # bsky url length is 22
@@ -15,7 +15,7 @@ max_len = 290
 url_len = 22
 
 # posts for new submissions:
-url_margin = 4
+url_margin = 2
 urls_len = (url_len + url_margin) * 3
 min_len_authors = 90
 min_len_title = 128
@@ -32,5 +32,5 @@ post_updates = 10000
 
 # limits independent to specific categories
 bsky_sleep = 0.1
-overall_bsky_limit_call = 0.1
-overall_bsky_limit_period = 0.2
+overall_bsky_limit_call = 5
+overall_bsky_limit_period = 1
