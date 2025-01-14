@@ -85,14 +85,14 @@ scripts with atproto. bXiv is not affiliated with arXiv.
 	cross-lists and replacements from bots in the access keys.
 
 
-* On the use of metadata of arXiv articles, there is the web page of
-   [Terms of Use for arXiv APIs](https://arxiv.org/help/api/tou). As
-   of the revision 0.8.0, this says that "You are free to use descriptive
-   metadata about arXiv e-prints under the terms of the Creative
-   Commons Universal (CC0 1.0) Public Domain Declaration." and
-   "Descriptive metadata includes information for discovery and
-   identification purposes, and includes fields such as title,
-   abstract, authors, identifiers, and classification terms."
+* On the use of metadata of arXiv articles, the web page
+   [Terms of Use for arXiv APIs](https://arxiv.org/help/api/tou)
+   says that "You are free to use descriptive metadata about
+   arXiv e-prints under the terms of the Creative Commons Universal
+   (CC0 1.0) Public Domain Declaration." and "Descriptive metadata
+   includes information for discovery and identification purposes, and
+   includes fields such as title, abstract, authors, identifiers, and
+   classification terms."
 
 
 ## Usage

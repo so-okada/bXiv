@@ -272,6 +272,22 @@ def update(
         )
         return result
 
+    if not client:
+        update_print(
+            cat,
+            arxiv_id,
+            "\n**error: client not available:\n\n" + text,
+            post_uri,
+            post_cid,
+            root_uri,
+            root_cid,
+            parent_uri,
+            parent_cid,
+            pt_method,
+            pt_mode,
+        )
+        return result
+
     error_text = (
         "\nthread arXiv category: "
         + cat
@@ -983,7 +999,12 @@ def check_dates(time1, time2):
 
 def atproto_client(keys):
     client = Client()
-    client.login(keys["username"], keys["password"])
+    try:
+        client.login(keys["username"], keys["password"])
+    except Exception:
+        print("\n**error: " + keys["username"] + " failed to login.")
+        traceback.print_exc()
+        return None
     return client
 
 
