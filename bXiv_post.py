@@ -346,7 +346,7 @@ def update(
             traceback.print_exc()
     elif pt_method == "unrepost":
         try:
-            result = client.delete_repost(result.uri)
+            result = client.delete_repost(post_uri)
             update_print(
                 cat,
                 arxiv_id,
