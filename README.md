@@ -298,6 +298,10 @@ optional arguments:
 * 0.0.1
 
   * 2025-01-12, initial release.
+  
+* 0.0.2
+
+  * 2025-02-04, minor updates.
 	
 ## List of Bots
 

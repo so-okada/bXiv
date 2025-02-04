@@ -291,12 +291,22 @@ def update(
     error_text = (
         "\nthread arXiv category: "
         + cat
+        + "\nclient_handle: "
+        + client.me.handle
+        + "\nclient_did: "
+        + client.me.did
         + "\narXiv id: "
         + arxiv_id
         + "\ntext: "
         + text
         + "\nuri: "
+        + post_uri
+        + "\ncid: "
+        + post_cid
+        + "\nurl: "
         + atproto_uri_to_url(post_uri)
+        + "\npt_method: "
+        + pt_method
         + "\n"
     )
 
@@ -708,12 +718,7 @@ def crosslists(logfiles, cat, client, update_limited, entries, pt_mode):
             traceback.print_exc()
             return False
         for repost_index, repost_row in drepost_f.iterrows():
-            try:
-                log_time = repost_row["utc"]
-            except Exception:
-                error_text = "\n**error for row['utc']**" + error_text
-                print(error_text)
-                traceback.print_exc()
+            log_time = repost_row["utc"]
             log_time = datetime.fromisoformat(log_time)
             if check_dates(time_now, log_time):
                 ptext = "already reposted today for cross-lists: " + cat
@@ -752,30 +757,31 @@ def crosslists(logfiles, cat, client, update_limited, entries, pt_mode):
             traceback.print_exc()
             return False
 
-        time_now = datetime.utcnow().replace(microsecond=0)
+        for repost_index, repost_row in drepost_f.iterrows():
+            if arxiv_id == repost_row["arxiv_id"]:
+                post_uri = repost_row["uri"]
+                post_cid = repost_row["cid"]
+                update_limited(
+                    logfiles,
+                    cat,
+                    client,
+                    "",
+                    arxiv_id,
+                    "",
+                    post_uri,
+                    post_cid,
+                    "",
+                    "",
+                    "",
+                    "",
+                    "unrepost",
+                    pt_mode,
+                )
+
         for post_index, post_row in post_df.iterrows():
             if arxiv_id == post_row["arxiv_id"]:
                 post_uri = post_row["uri"]
                 post_cid = post_row["cid"]
-                post_time = datetime.fromisoformat(post_row["utc"])
-                # if-clause to avoid double reposts
-                if not check_dates(time_now, post_time):
-                    update_limited(
-                        logfiles,
-                        cat,
-                        client,
-                        "",
-                        arxiv_id,
-                        "",
-                        post_uri,
-                        post_cid,
-                        "",
-                        "",
-                        "",
-                        "",
-                        "unrepost",
-                        pt_mode,
-                    )
                 update_limited(
                     logfiles,
                     cat,
