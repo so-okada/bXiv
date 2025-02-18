@@ -31,6 +31,7 @@ a_day = 24 * 60 * 60
 post_updates = 10000
 
 # limits independent to specific categories
+bsky_createaccts_sleep = 3
 bsky_sleep = 0.1
 overall_bsky_limit_call = 5
 overall_bsky_limit_period = 1

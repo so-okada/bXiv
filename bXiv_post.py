@@ -1006,6 +1006,7 @@ def check_dates(time1, time2):
 def atproto_client(keys):
     client = Client()
     try:
+        time.sleep(bsky_createaccts_sleep)
         client.login(keys["username"], keys["password"])
     except Exception:
         print("\n**error: " + keys["username"] + " failed to login.")
