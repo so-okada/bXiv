@@ -331,6 +331,7 @@ optional arguments:
 * [https://bsky.app/profile/csmm-bot.bsky.social](https://bsky.app/profile/csmm-bot.bsky.social): cs.MM Multimedia
 * [https://bsky.app/profile/csms-bot.bsky.social](https://bsky.app/profile/csms-bot.bsky.social): cs.MS Mathematical Software
 * [https://bsky.app/profile/csne-bot.bsky.social](https://bsky.app/profile/csne-bot.bsky.social): cs.NE Neural and Evolutionary Computing
+* [https://bsky.app/profile/csna-bot.bsky.social](https://bsky.app/profile/csna-bot.bsky.social): cs.NA Numerical Analysis 
 * [https://bsky.app/profile/csni-bot.bsky.social](https://bsky.app/profile/csni-bot.bsky.social): cs.NI Networking and Internet Architecture
 * [https://bsky.app/profile/csoh-bot.bsky.social](https://bsky.app/profile/csoh-bot.bsky.social): cs.OH Other Computer Science
 * [https://bsky.app/profile/csos-bot.bsky.social](https://bsky.app/profile/csos-bot.bsky.social): cs.OS Operating Systems
@@ -341,6 +342,7 @@ optional arguments:
 * [https://bsky.app/profile/cssd-bot.bsky.social](https://bsky.app/profile/cssd-bot.bsky.social): cs.SD Sound
 * [https://bsky.app/profile/csse-bot.bsky.social](https://bsky.app/profile/csse-bot.bsky.social): cs.SE Software Engineering
 * [https://bsky.app/profile/cssi-bot.bsky.social](https://bsky.app/profile/cssi-bot.bsky.social): cs.SI Social and Information Networks
+* [https://bsky.app/profile/cssy-bot.bsky.social](https://bsky.app/profile/cssy-bot.bsky.social): cs.SY Systems and Control
 * [https://bsky.app/profile/econem-bot.bsky.social](https://bsky.app/profile/econem-bot.bsky.social): econ.EM Econometrics
 * [https://bsky.app/profile/econgn-bot.bsky.social](https://bsky.app/profile/econgn-bot.bsky.social): econ.GN General Economics
 * [https://bsky.app/profile/econth-bot.bsky.social](https://bsky.app/profile/econth-bot.bsky.social): econ.TH Theoretical Economics
@@ -364,9 +366,11 @@ optional arguments:
 * [https://bsky.app/profile/mathgr-bot.bsky.social](https://bsky.app/profile/mathgr-bot.bsky.social): math.GR Group Theory
 * [https://bsky.app/profile/mathgt-bot.bsky.social](https://bsky.app/profile/mathgt-bot.bsky.social): math.GT Geometric Topology
 * [https://bsky.app/profile/mathho-bot.bsky.social](https://bsky.app/profile/mathho-bot.bsky.social): math.HO History and Overview
+* [https://bsky.app/profile/mathit-bot.bsky.social](https://bsky.app/profile/mathit-bot.bsky.social): math.IT Information Theory
 * [https://bsky.app/profile/mathkt-bot.bsky.social](https://bsky.app/profile/mathkt-bot.bsky.social): math.KT K-Theory and Homology
 * [https://bsky.app/profile/mathlo-bot.bsky.social](https://bsky.app/profile/mathlo-bot.bsky.social): math.LO Logic
 * [https://bsky.app/profile/mathmg-bot.bsky.social](https://bsky.app/profile/mathmg-bot.bsky.social): math.MG Metric Geometry
+* [https://bsky.app/profile/mathmp-bot.bsky.social](https://bsky.app/profile/mathmp-bot.bsky.social): math.MP Mathematical Physics
 * [https://bsky.app/profile/mathna-bot.bsky.social](https://bsky.app/profile/mathna-bot.bsky.social): math.NA Numerical Analysis
 * [https://bsky.app/profile/mathnt-bot.bsky.social](https://bsky.app/profile/mathnt-bot.bsky.social): math.NT Number Theory
 * [https://bsky.app/profile/mathoa-bot.bsky.social](https://bsky.app/profile/mathoa-bot.bsky.social): math.OA Operator Algebras
@@ -451,6 +455,7 @@ optional arguments:
 * [https://bsky.app/profile/statme-bot.bsky.social](https://bsky.app/profile/statme-bot.bsky.social): stat.ME Methodology
 * [https://bsky.app/profile/statml-bot.bsky.social](https://bsky.app/profile/statml-bot.bsky.social): stat.ML Machine Learning
 * [https://bsky.app/profile/statot-bot.bsky.social](https://bsky.app/profile/statot-bot.bsky.social): stat.OT Other Statistics
+* [https://bsky.app/profile/statth-bot.bsky.social](https://bsky.app/profile/statth-bot.bsky.social): stat.TH Statistics Theory
 
 
 ## Author
