@@ -892,22 +892,22 @@ def repost_replacement(logfiles, cat, client, update_limited, entries, pt_mode):
         subject = each["primary_subject"]
 
         if subject not in logfiles.keys():
-            print("No quote log for " + subject)
+            print("No repost log for " + subject)
             continue
-        quote_filename = logfiles[subject]["quote_log"]
+        repost_filename = logfiles[subject]["repost_log"]
 
-        # skip without quote_log
-        if not os.path.exists(quote_filename):
-            print("no quote log file for " + subject)
+        # skip without repost_log
+        if not os.path.exists(repost_filename):
+            print("no repost log file for " + subject)
             continue
 
-        # open quote_log
+        # open repost_log
         try:
-            quote_df = pd.read_csv(quote_filename, dtype=object)
+            repost_df = pd.read_csv(repost_filename, dtype=object)
         except Exception:
             time_now = datetime.utcnow().replace(microsecond=0)
             error_text = (
-                "\nutc: " + str(time_now) + "\nquote_filename: " + quote_filename
+                "\nutc: " + str(time_now) + "\nrepost_filename: " + repost_filename
             )
             error_text = "\n**error for pd.read_csv**" + error_text
             print(error_text)
@@ -915,8 +915,8 @@ def repost_replacement(logfiles, cat, client, update_limited, entries, pt_mode):
             return False
 
         # unrepost and repost
-        for post_index, post_row in quote_df.iterrows():
-            # check if arxiv_id is in quote_log.
+        for post_index, post_row in repost_df.iterrows():
+            # check if arxiv_id is in repost_log.
             if arxiv_id == post_row["arxiv_id"]:
                 log_time = post_row["utc"]
                 log_time = datetime.fromisoformat(log_time)

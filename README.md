@@ -300,6 +300,9 @@ optional arguments:
 * 0.0.2, minor updates,  2025-02-04.
 
 * 0.0.3, an update for createAccount endpoint ratelimit (100 per 5 min), 2025-02-18. 
+
+* 0.0.4, a fix for unrepost/repost, 2025-03-02.
+
  
 ## List of Bots
 
