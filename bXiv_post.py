@@ -488,6 +488,12 @@ def update_log(logfiles, cat, total, arxiv_id, result, pt_method, pt_mode):
             [time_now, total, logfiles[cat]["username"], result.uri, result.cid]
         ]
         df = pd.DataFrame(log_text, columns=["utc", "total", "username", "uri", "cid"])
+    elif pt_method == "unrepost":
+        log_text = [[time_now, arxiv_id, logfiles[cat]["username"], "", ""]]
+        df = pd.DataFrame(
+            log_text, columns=["utc", "arxiv_id", "username", "uri", "cid"]
+        )
+        filename = logfiles[cat][pt_method + "_log"]
     else:
         log_text = [
             [time_now, arxiv_id, logfiles[cat]["username"], result.uri, result.cid]
