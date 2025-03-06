@@ -9,13 +9,13 @@ arxiv_call_sleep = 5 * 60
 main_thread_wait = 10
 
 # max post length is 300
-# bsky url length is 22
-# 2024-12
-max_len = 290
-url_len = 22
+max_len = 300
+
+# len(list("https://arxiv.org/html/0000.0000v1"))=34
+url_len = 34
 
 # posts for new submissions:
-url_margin = 2
+url_margin = 1
 urls_len = (url_len + url_margin) * 3
 min_len_authors = 90
 min_len_title = 128
