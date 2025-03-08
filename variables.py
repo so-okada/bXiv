@@ -17,10 +17,10 @@ url_len = 34
 # posts for new submissions:
 url_margin = 1
 urls_len = (url_len + url_margin) * 3
-min_len_authors = 90
-min_len_title = 128
+min_len_authors = 60
+min_len_title = 120
 newsub_spacer = 1
-margin = 10
+margin = 2
 
 # abstract tag for a counter and url
 abst_tag = 11 + (url_len + url_margin) + 1
