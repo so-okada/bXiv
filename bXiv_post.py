@@ -715,11 +715,12 @@ def crosslists(logfiles, cat, client, update_limited, entries, pt_mode):
     repost_filename = logfiles[cat]["repost_log"]
     time_now = datetime.utcnow().replace(microsecond=0)
     error_text = "\nutc: " + str(time_now) + "\nrepost_filename: " + repost_filename
+
     if os.path.exists(repost_filename):
         try:
             drepost_f = pd.read_csv(repost_filename, dtype=object)
         except Exception:
-            error_text = "\n**error for pd.read_csv**" + error_text
+            error_text = "\n**error for repost log**" + error_text
             print(error_text)
             traceback.print_exc()
             return False
@@ -730,6 +731,8 @@ def crosslists(logfiles, cat, client, update_limited, entries, pt_mode):
                 ptext = "already reposted today for cross-lists: " + cat
                 print(ptext)
                 return None
+    else:
+        print("\n**error: no repost log file for " + cat)
 
     for each in entries:
         arxiv_id = each["id"]
@@ -758,7 +761,7 @@ def crosslists(logfiles, cat, client, update_limited, entries, pt_mode):
         except Exception:
             time_now = datetime.utcnow().replace(microsecond=0)
             error_text = "\nutc: " + str(time_now) + "\npost_filename: " + post_filename
-            error_text = "\n**error for pd.read_csv**" + error_text
+            error_text = "\n**error for post log**" + error_text
             print(error_text)
             traceback.print_exc()
             return False
@@ -821,7 +824,7 @@ def quote_replacement(logfiles, cat, client, update_limited, entries, pt_mode):
     except Exception:
         time_now = datetime.utcnow().replace(microsecond=0)
         error_text = "\nutc: " + str(time_now) + "\npost_filename: " + post_filename
-        error_text = "\n**error for pd.read_csv**" + error_text
+        error_text = "\n**error for post log**" + error_text
         print(error_text)
         traceback.print_exc()
         return False
@@ -838,7 +841,7 @@ def quote_replacement(logfiles, cat, client, update_limited, entries, pt_mode):
     except Exception:
         time_now = datetime.utcnow().replace(microsecond=0)
         error_text = "\nutc: " + str(time_now) + "\nquote_filename: " + quote_filename
-        error_text = "\n**error for pd.read_csv**" + error_text
+        error_text = "\n**error for quote log**" + error_text
         print(error_text)
         traceback.print_exc()
         return False
@@ -915,7 +918,7 @@ def repost_replacement(logfiles, cat, client, update_limited, entries, pt_mode):
             error_text = (
                 "\nutc: " + str(time_now) + "\nrepost_filename: " + repost_filename
             )
-            error_text = "\n**error for pd.read_csv**" + error_text
+            error_text = "\n**error for repost log**" + error_text
             print(error_text)
             traceback.print_exc()
             return False
@@ -980,7 +983,7 @@ def check_log_dates(cat, logname, logfiles):
         df = pd.read_csv(filename, dtype=object)
     except Exception:
         error_text = "\nutc: " + str(time_now) + "\nfilename: " + filename
-        error_text = "\n**error for pd.read_csv**" + error_text
+        error_text = "\n**error for log file**" + error_text
         print(error_text)
         traceback.print_exc()
         return False
