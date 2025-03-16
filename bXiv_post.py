@@ -36,7 +36,7 @@ def main(switches, logfiles, captions, aliases, pt_mode):
 
     for cat in switches:
         client_dict[cat] = atproto_client(switches[cat])
-        update_dict[cat] = sleep_and_retry(rate_limited(post_updates, a_day)(update))
+        update_dict[cat] = sleep_and_retry(rate_limited(post_updates, an_hour)(update))
         newsubmission_mode[cat] = int(switches[cat]["newsubmissions"])
         abstract_mode[cat] = int(switches[cat]["abstracts"])
         crosslist_mode[cat] = int(switches[cat]["crosslists"])
@@ -766,7 +766,11 @@ def crosslists(logfiles, cat, client, update_limited, entries, pt_mode):
             traceback.print_exc()
             return False
 
-        for repost_index, repost_row in drepost_f.iterrows():
+        # reverse the order of drepost_f rows
+        all_rows = list(drepost_f.iterrows())
+        all_rows.reverse()
+
+        for repost_index, repost_row in all_rows:
             if arxiv_id == repost_row["arxiv_id"]:
                 post_uri = repost_row["uri"]
                 post_cid = repost_row["cid"]
@@ -786,6 +790,7 @@ def crosslists(logfiles, cat, client, update_limited, entries, pt_mode):
                     "unrepost",
                     pt_mode,
                 )
+                break
 
         for post_index, post_row in post_df.iterrows():
             if arxiv_id == post_row["arxiv_id"]:
@@ -865,7 +870,7 @@ def quote_replacement(logfiles, cat, client, update_limited, entries, pt_mode):
 
     for each in entries_to_quote:
         arxiv_id = each["id"]
-        username = logfiles[cat]["username"]
+        # username = logfiles[cat]["username"]
         for post_index, post_row in post_df.iterrows():
             if arxiv_id == post_row["arxiv_id"]:
                 post_uri = post_row["uri"]

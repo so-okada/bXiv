@@ -25,13 +25,13 @@ margin = 2
 # abstract tag for a counter and url
 abst_tag = 11 + (url_len + url_margin) + 1
 
-# rate limit for each categor
+# rate limit for each category
 # https://docs.bsky.app/docs/advanced-guides/rate-limits
-a_day = 24 * 60 * 60
-post_updates = 10000
+an_hour = 60 * 60
+post_updates = 1666
 
 # limits independent to specific categories
 bsky_createaccts_sleep = 3
-bsky_sleep = 0.72
-overall_bsky_limit_call = 2
-overall_bsky_limit_period = 1
+overall_bsky_limit_call = 3000
+overall_bsky_limit_period = 5 * 60
+bsky_sleep = 0.5
