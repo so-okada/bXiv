@@ -411,7 +411,7 @@ def update(
                 facets=generate_facets_for_urls(text),
                 embed={
                     "$type": "app.bsky.embed.record",
-                    "record": {"uri": result.uri, "cid": result.cid},
+                    "record": {"uri": post_uri, "cid": post_cid},
                 },
             )
             update_print(
@@ -879,7 +879,7 @@ def quote_replacement(logfiles, cat, client, update_limited, entries, pt_mode):
                     "This https://arxiv.org/abs/"
                     + arxiv_id
                     + " has been replaced. "
-                    + tools(arxiv_id)
+                    #    + tools(arxiv_id)
                 )
                 ptext = ptext + atproto_uri_to_url(post_uri)
                 update_limited(

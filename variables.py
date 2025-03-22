@@ -28,10 +28,10 @@ abst_tag = 11 + (url_len + url_margin) + 1
 # rate limit for each category
 # https://docs.bsky.app/docs/advanced-guides/rate-limits
 an_hour = 60 * 60
-post_updates = 1666
+post_updates = 1500
 
 # limits independent to specific categories
 bsky_createaccts_sleep = 3
-overall_bsky_limit_call = 3000
+overall_bsky_limit_call = 2500
 overall_bsky_limit_period = 5 * 60
-bsky_sleep = 0.5
+bsky_sleep = 1
