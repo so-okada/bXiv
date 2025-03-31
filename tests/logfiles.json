@@ -3,18 +3,20 @@
         "username": "xxx.bsky.social",
         "post_summary_log": "logfiles/mathac-bot_post_summaries.csv",
         "post_log": "logfiles/mathac-bot_posts.csv",
-        "repost_log": "logfiles/mathac-bot_reposts.csv",
+        "repost_crosslist_log": "logfiles/mathac-bot_reposts_crosslists.csv",
         "unrepost_log": "logfiles/mathac-bot_unreposts.csv",
         "reply_log": "logfiles/mathac-bot_replies.csv",
-	"quote_log": "logfiles/mathac-bot_quotes.csv"
+	"quote_log": "logfiles/mathac-bot_quotes.csv",
+	"repost_replacement_log": "logfiles/mathac-bot_reposts_replacements.csv"
     },
     "math.AG": {
         "username": "xxx.bsky.social",
         "post_summary_log": "logfiles/mathag-bot_post_summaries.csv",
         "post_log": "logfiles/mathag-bot_posts.csv",
-        "repost_log": "logfiles/mathag-bot_reposts.csv",
+        "repost_crosslist_log": "logfiles/mathag-bot_reposts_crosslists.csv",
         "unrepost_log": "logfiles/mathag-bot_unreposts.csv",
         "reply_log": "logfiles/mathag-bot_replies.csv",
-        "quote_log": "logfiles/mathag-bot_quotes.csv"
+        "quote_log": "logfiles/mathag-bot_quotes.csv",
+	"repost_replacement_log": "logfiles/mathag-bot_reposts_replacements.csv"	
     }
 }

@@ -331,7 +331,7 @@ def update(
             error_text = "\n**error to post**" + "\nutc: " + str(time_now) + error_text
             print(error_text)
             traceback.print_exc()
-    elif pt_method == "repost":
+    elif pt_method == "repost_crosslist" or pt_method == "repost_replacement":
         try:
             result = client.repost(post_uri, post_cid)
             update_print(
@@ -709,42 +709,11 @@ def newsubmissions(
 
 # crosslists by reposts
 def crosslists(logfiles, cat, client, update_limited, entries, pt_mode):
-    # if-clause to avoid duplication errors
-    # when bXiv runs twice with cross-lists in a day.
-
-    repost_filename = logfiles[cat]["repost_log"]
-    time_now = datetime.utcnow().replace(microsecond=0)
-    error_text = "\nutc: " + str(time_now) + "\nrepost_filename: " + repost_filename
-
-    if os.path.exists(repost_filename):
-        try:
-            drepost_f = pd.read_csv(repost_filename, dtype=object)
-        except Exception:
-            error_text = "\n**error for repost log**" + error_text
-            print(error_text)
-            traceback.print_exc()
-            return False
-        for repost_index, repost_row in drepost_f.iterrows():
-            log_time = repost_row["utc"]
-            log_time = datetime.fromisoformat(log_time)
-            if check_dates(time_now, log_time):
-                ptext = "already reposted today for cross-lists: " + cat
-                print(ptext)
-                return None
-    else:
-        print("\n**error: no repost log file for " + cat)
-
     for each in entries:
         arxiv_id = each["id"]
         subject = each["primary_subject"]
         print(cat, " ", arxiv_id, " ", subject)
 
-        if subject == cat:
-            # This case is not listed in new submission web pages,
-            # but was in rss feeds (2020-06-14).
-            ptext = "skip: cross-list of an article in its own category \n"
-            print(ptext)
-            continue
         if subject not in logfiles.keys():
             print("not in logfiles: " + subject)
             continue
@@ -766,32 +735,6 @@ def crosslists(logfiles, cat, client, update_limited, entries, pt_mode):
             traceback.print_exc()
             return False
 
-        # reverse the order of drepost_f rows
-        all_rows = list(drepost_f.iterrows())
-        all_rows.reverse()
-
-        for repost_index, repost_row in all_rows:
-            if arxiv_id == repost_row["arxiv_id"]:
-                post_uri = repost_row["uri"]
-                post_cid = repost_row["cid"]
-                update_limited(
-                    logfiles,
-                    cat,
-                    client,
-                    "",
-                    arxiv_id,
-                    "",
-                    post_uri,
-                    post_cid,
-                    "",
-                    "",
-                    "",
-                    "",
-                    "unrepost",
-                    pt_mode,
-                )
-                break
-
         for post_index, post_row in post_df.iterrows():
             if arxiv_id == post_row["arxiv_id"]:
                 post_uri = post_row["uri"]
@@ -809,7 +752,7 @@ def crosslists(logfiles, cat, client, update_limited, entries, pt_mode):
                     "",
                     "",
                     "",
-                    "repost",
+                    "repost_crosslist",
                     pt_mode,
                 )
 
@@ -901,41 +844,83 @@ def quote_replacement(logfiles, cat, client, update_limited, entries, pt_mode):
 
 
 def repost_replacement(logfiles, cat, client, update_limited, entries, pt_mode):
+    # skip without repost_replacement_log
+    repost_replacement_filename = logfiles[cat]["repost_replacement_log"]
+    if not os.path.exists(repost_replacement_filename):
+        print("no repost replacement log file for " + cat)
+        return False
+
+    # open repost_replacement_log
+    try:
+        repost_replacement_df = pd.read_csv(repost_replacement_filename, dtype=object)
+    except Exception:
+        time_now = datetime.utcnow().replace(microsecond=0)
+        error_text = (
+            "\nutc: "
+            + str(time_now)
+            + "\nrepost_replacement_filename: "
+            + repost_replacement_filename
+        )
+        error_text = "\n**error for repost replacement log**" + error_text
+        print(error_text)
+        traceback.print_exc()
+        return False
+
     for each in entries:
         arxiv_id = each["id"]
         subject = each["primary_subject"]
 
         if subject not in logfiles.keys():
-            print("No repost log for " + subject)
+            print("No quote log for " + subject)
             continue
-        repost_filename = logfiles[subject]["repost_log"]
+        quote_filename = logfiles[subject]["quote_log"]
 
-        # skip without repost_log
-        if not os.path.exists(repost_filename):
-            print("no repost log file for " + subject)
+        # skip without quote_log
+        if not os.path.exists(quote_filename):
+            print("no quote log file for " + subject)
             continue
 
-        # open repost_log
+        # open quote_log
         try:
-            repost_df = pd.read_csv(repost_filename, dtype=object)
+            quote_df = pd.read_csv(quote_filename, dtype=object)
         except Exception:
             time_now = datetime.utcnow().replace(microsecond=0)
             error_text = (
-                "\nutc: " + str(time_now) + "\nrepost_filename: " + repost_filename
+                "\nutc: " + str(time_now) + "\nquote_filename: " + quote_filename
             )
-            error_text = "\n**error for repost log**" + error_text
+            error_text = "\n**error for quote log**" + error_text
             print(error_text)
             traceback.print_exc()
             return False
 
         # unrepost and repost
-        for post_index, post_row in repost_df.iterrows():
-            # check if arxiv_id is in repost_log.
+        for post_index, post_row in quote_df.iterrows():
+            # check if arxiv_id is in quote_log.
             if arxiv_id == post_row["arxiv_id"]:
                 log_time = post_row["utc"]
                 log_time = datetime.fromisoformat(log_time)
                 time_now = datetime.utcnow().replace(microsecond=0)
                 if cat != subject or not check_dates(time_now, log_time):
+                    for repost_index, repost_row in repost_replacement_df.iterrows():
+                        if arxiv_id == repost_row["arxiv_id"]:
+                            post_uri = repost_row["uri"]
+                            post_cid = repost_row["cid"]
+                            update_limited(
+                                logfiles,
+                                cat,
+                                client,
+                                "",
+                                arxiv_id,
+                                "",
+                                post_uri,
+                                post_cid,
+                                "",
+                                "",
+                                "",
+                                "",
+                                "unrepost",
+                                pt_mode,
+                            )
                     post_uri = post_row["uri"]
                     post_cid = post_row["cid"]
                     update_limited(
@@ -951,23 +936,7 @@ def repost_replacement(logfiles, cat, client, update_limited, entries, pt_mode):
                         "",
                         "",
                         "",
-                        "unrepost",
-                        pt_mode,
-                    )
-                    update_limited(
-                        logfiles,
-                        cat,
-                        client,
-                        "",
-                        arxiv_id,
-                        "",
-                        post_uri,
-                        post_cid,
-                        "",
-                        "",
-                        "",
-                        "",
-                        "repost",
+                        "repost_replacement",
                         pt_mode,
                     )
 
