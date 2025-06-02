@@ -455,8 +455,8 @@ optional arguments:
 * [https://bsky.app/profile/qfinrm-bot.bsky.social](https://bsky.app/profile/qfinrm-bot.bsky.social): q-fin.RM Risk Management
 * [https://bsky.app/profile/qfinst-bot.bsky.social](https://bsky.app/profile/qfinst-bot.bsky.social): q-fin.ST Statistical Finance
 * [https://bsky.app/profile/qfintr-bot.bsky.social](https://bsky.app/profile/qfintr-bot.bsky.social): q-fin.TR Trading and Market Microstructure
-* [https://bsky.app/profile/statap-bot.bsky.social](https://bsky.app/profile/statme-bot.bsky.social): stat.AP Applications (from 2025-06)
-* [https://bsky.app/profile/statco-bot.bsky.social](https://bsky.app/profile/statml-bot.bsky.social): stat.CO Computation (from 2025-06)
+* [https://bsky.app/profile/statap-bot.bsky.social](https://bsky.app/profile/statap-bot.bsky.social): stat.AP Applications (from 2025-06)
+* [https://bsky.app/profile/statco-bot.bsky.social](https://bsky.app/profile/statco-bot.bsky.social): stat.CO Computation (from 2025-06)
 * [https://bsky.app/profile/statme-bot.bsky.social](https://bsky.app/profile/statme-bot.bsky.social): stat.ME Methodology
 * [https://bsky.app/profile/statml-bot.bsky.social](https://bsky.app/profile/statml-bot.bsky.social): stat.ML Machine Learning
 * [https://bsky.app/profile/statot-bot.bsky.social](https://bsky.app/profile/statot-bot.bsky.social): stat.OT Other Statistics
