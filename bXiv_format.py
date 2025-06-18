@@ -5,7 +5,7 @@
 
 import re
 from nameparser import HumanName
-from variables import *
+from bXiv_variables import *
 
 
 # format all new submissions

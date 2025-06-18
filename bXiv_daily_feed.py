@@ -8,7 +8,7 @@ import time
 from datetime import datetime, date, timedelta
 from ratelimit import limits, sleep_and_retry, rate_limited
 
-from variables import *
+from bXiv_variables import *
 import bXiv_post as bXp
 import arXiv_feed_parser as afpa
 

@@ -26,7 +26,7 @@ scripts with atproto. bXiv is not affiliated with arXiv.
 	- bXiv_format.py
 	- bXiv_daily_feed.py 	
 	- arXiv_feed_parser.py
-	- variables.py
+	- bXiv_variables.py
 
 
 * Configure switches.json, logfiles.json, and aliases.json in the
@@ -49,9 +49,9 @@ scripts with atproto. bXiv is not affiliated with arXiv.
     name math.IT.  If provided, bXiv replaces category names by their
     aliases for new submissions, cross-lists, and replacements.
 	
-* Configure variables.py for your settings. 
+* Configure bXiv_variables.py for your settings. 
 
-   - variables.py assigns format parameters for bXiv posts 
+   - bXiv_variables.py assigns format parameters for bXiv posts 
    and access frequencies for arXiv and twitter.
 
 ## Notes

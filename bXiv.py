@@ -6,7 +6,7 @@
 import json
 import argparse
 import traceback
-from variables import *
+from bXiv_variables import *
 import bXiv_post as bXp
 
 parser = argparse.ArgumentParser(

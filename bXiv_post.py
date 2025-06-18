@@ -13,7 +13,7 @@ from threading import Thread
 from datetime import datetime, timedelta
 from ratelimit import limits, sleep_and_retry, rate_limited
 
-from variables import *
+from bXiv_variables import *
 import bXiv_format as bXf
 import bXiv_daily_feed as bXd
 
