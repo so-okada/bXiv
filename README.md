@@ -335,7 +335,7 @@ optional arguments:
 * [https://bsky.app/profile/csms-bot.bsky.social](https://bsky.app/profile/csms-bot.bsky.social): cs.MS Mathematical Software
 * [https://bsky.app/profile/csne-bot.bsky.social](https://bsky.app/profile/csne-bot.bsky.social): cs.NE Neural and Evolutionary Computing
 * [https://bsky.app/profile/csna-bot.bsky.social](https://bsky.app/profile/csna-bot.bsky.social): cs.NA Numerical Analysis 
-* [https://bsky.app/profile/csni-bot.bsky.social](https://bsky.app/profile/csni-bot.bsky.social): cs.NI Networking and Internet Architecture
+* [https://bsky.app/profile/csni-bot.bsky.social](https://bsky.app/profile/csni-bot.bsky.social): cs.NI Networking and Internet Architecture (2025-09 suspended, appeal made to moderation@blueskyweb.xyz)
 * [https://bsky.app/profile/csoh-bot.bsky.social](https://bsky.app/profile/csoh-bot.bsky.social): cs.OH Other Computer Science
 * [https://bsky.app/profile/csos-bot.bsky.social](https://bsky.app/profile/csos-bot.bsky.social): cs.OS Operating Systems
 * [https://bsky.app/profile/cspf-bot.bsky.social](https://bsky.app/profile/cspf-bot.bsky.social): cs.PF Performance
@@ -467,14 +467,14 @@ optional arguments:
 So Okada, so.okada@gmail.com, https://so-okada.github.io/
 
 ## Motivation
-This is an open-science practice (see
-https://github.com/so-okada/twXiv#motivation).  Since 2013-04, the
+This is an open-science practice 
+(see https://github.com/so-okada/twXiv#motivation).  Since 2013-04, the
 author has been running twitter bots for all arXiv math categories. 
 Since 2023-01, the author has been running mastodon bots for
-all arXiv categories 
-with [toXiv](https://github.com/so-okada/toXiv). Since 2025-02, the author has been
-running the blusky bots for all arXiv categories (except stat.AP and stat.CO from 2025-06)
-with [bXiv](https://github.com/so-okada/bXiv).
+all arXiv categories with [toXiv](https://github.com/so-okada/toXiv). 
+Since 2025-02, the author has been running the blusky bots for all 
+arXiv categories (except stat.AP and stat.CO added from 2025-06 
+and cs.NI suspended from 2025-09) with [bXiv](https://github.com/so-okada/bXiv).
 
 ## License
 [AGPLv3](https://www.gnu.org/licenses/agpl-3.0.en.html)
