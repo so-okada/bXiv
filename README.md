@@ -128,7 +128,7 @@ optional arguments:
 ## Sample stdouts
 
 
-* [x] New submissions for math.AC and math.AG with no log files:
+* New submissions for math.AC and math.AG with no log files:
 
 	```
 	% ./bXiv.py -s tests/switches.json -m 1
