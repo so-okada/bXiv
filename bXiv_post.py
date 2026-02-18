@@ -636,9 +636,11 @@ def newsubmissions(
     for each in entries:
         if post_counter < post_updates:
             arxiv_id = each["id"]
+            authors_prefix = (
+                each["authors"] + ": " if each["authors"] else ""
+            )
             article_text = (
-                each["authors"]
-                + ": "
+                authors_prefix
                 + each["title"]
                 + " "
                 + each["abs_url"]
