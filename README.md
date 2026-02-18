@@ -303,6 +303,8 @@ optional arguments:
 
 * 0.0.4, a fix for unrepost/repost, 2025-03-02.
 
+* 0.0.5, a fix for name handling, 2026-02-18.
+
  
 ## List of Bots
 
