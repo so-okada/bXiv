@@ -133,8 +133,9 @@ def surnames(orig):
 
 
 def etal(orig):
-    first_author = re.search(r"[\w|.| ]+,", orig)
-    return first_author.group() + " et al."
+    names = orig.split(",")
+    first_author = names[0].strip()
+    return first_author + ", et al."
 
 
 # separate an abstract with a counter and url tag
