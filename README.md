@@ -7,10 +7,10 @@ scripts with atproto. bXiv is not affiliated with arXiv.
 
 ## Setup
 
-* Install atproto, pandas, ratelimit, atproto, nameparser, feedparser, and beautifulsoup4. 
+* Install atproto, pandas, ratelimit, nameparser, feedparser, and beautifulsoup4. 
 
 	```
-	% pip3 install atproto pandas ratelimit atproto nameparser feedparser beautifulsoup4
+	% pip3 install atproto pandas ratelimit nameparser feedparser beautifulsoup4
 	```
 
 * Let bXiv.py be executable.
@@ -32,14 +32,14 @@ scripts with atproto. bXiv is not affiliated with arXiv.
 * Configure switches.json, logfiles.json, and aliases.json in the
   tests directory for your settings.
 
-	- accesses.json specifies twitter access keys and whether to use
+	- accesses.json specifies bluesky access keys and whether to use
 	new submissions/abstracts/cross-lists/replacements by bXiv.
 
     - logfiles.json indicates log file locations for post summaries,
 	posts, reposts, unreposts, and replies.  You can check their
 	formats by mathACb_post_summaries.csv, mathACb_posts.csv,
 	mathACb_reposts.csv, mathACb_unreposts.csv, mathACb_replies.csv,
-	and mathACb_quotes.csv in the tests/logfiles director.  bXiv needs
+	and mathACb_quotes.csv in the tests/logfiles directory.  bXiv needs
 	a post log file for cross-lists and replacements.  Other log files
 	are useful to avoid duplication errors of posts and reposts.
 		
@@ -52,7 +52,7 @@ scripts with atproto. bXiv is not affiliated with arXiv.
 * Configure bXiv_variables.py for your settings. 
 
    - bXiv_variables.py assigns format parameters for bXiv posts 
-   and access frequencies for arXiv and twitter.
+   and access frequencies for arXiv and bluesky.
 
 ## Notes
 
@@ -476,7 +476,8 @@ author has been running twitter bots for all arXiv math categories.
 Since 2023-01, the author has been running mastodon bots for
 all arXiv categories with [toXiv](https://github.com/so-okada/toXiv). 
 Since 2025-02, the author has been running the bluesky bots for all 
-arXiv categories (except stat.AP, stat.CO, and cs.NI as above) with [bXiv](https://github.com/so-okada/bXiv).
+arXiv categories (except stat.AP, stat.CO, and cs.NI as explained in 
+[List of Bots](https://github.com/so-okada/bXiv#list-of-bots)) with [bXiv](https://github.com/so-okada/bXiv).
 
 ## License
 [AGPLv3](https://www.gnu.org/licenses/agpl-3.0.en.html)
