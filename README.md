@@ -64,8 +64,7 @@ scripts with atproto. bXiv is not affiliated with arXiv.
   connection errors.
   Second, items of arXiv rss feeds are not
   necessarily the same as those of arXiv new submission web
-  pages (see
-	https://mastoxiv.page/@vela/109829294232368163).  Third,
+  pages (see https://mastoxiv.page/@vela/109829294232368163).  Third,
   arXiv_feed_parser for an arXiv category C gives new
   submissions whose primary subjects are the category C.
   Then, bXiv for the category C counts and posts a new
