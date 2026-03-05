@@ -476,7 +476,7 @@ Since 2023-01, the author has been running mastodon bots for
 all arXiv categories with [toXiv](https://github.com/so-okada/toXiv). 
 Since 2025-02, the author has been running the bluesky bots for all 
 arXiv categories (except stat.AP, stat.CO, and cs.NI as explained in 
-[List of Bots](https://github.com/so-okada/bXiv#list-of-bots)) with [bXiv](https://github.com/so-okada/bXiv).
+[List of Bots](https://github.com/so-okada/bXiv#list-of-bots)) with [bXiv](https://github.com/so-okada/bXiv) on GCP free tier.
 
 ## License
 [AGPLv3](https://www.gnu.org/licenses/agpl-3.0.en.html)
