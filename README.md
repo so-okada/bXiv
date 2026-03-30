@@ -464,6 +464,8 @@ optional arguments:
 * [https://bsky.app/profile/statot-bot.bsky.social](https://bsky.app/profile/statot-bot.bsky.social): stat.OT Other Statistics
 * [https://bsky.app/profile/statth-bot.bsky.social](https://bsky.app/profile/statth-bot.bsky.social): stat.TH Statistics Theory
 
+bXiv scripts for the bots are running on the OCI free tier (as of late
+March 2026).
 
 ## Author
 So Okada, so.okada@gmail.com, https://so-okada.github.io/
@@ -476,7 +478,7 @@ Since 2023-01, the author has been running mastodon bots for
 all arXiv categories with [toXiv](https://github.com/so-okada/toXiv). 
 Since 2025-02, the author has been running the bluesky bots for all 
 arXiv categories (except stat.AP, stat.CO, and cs.NI as explained in 
-[List of Bots](https://github.com/so-okada/bXiv#list-of-bots)) with [bXiv](https://github.com/so-okada/bXiv) on GCP free tier.
+[List of Bots](https://github.com/so-okada/bXiv#list-of-bots)) with bXiv.
 
 ## License
 [AGPLv3](https://www.gnu.org/licenses/agpl-3.0.en.html)
