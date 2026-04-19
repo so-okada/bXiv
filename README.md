@@ -304,6 +304,7 @@ optional arguments:
 
 * 0.0.5, a fix for name handling, 2026-02-18.
 
+* 0.0.6, a fix for feedparser timeout, 2026-04-19.
  
 ## List of Bots
 
