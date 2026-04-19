@@ -1,3 +1,5 @@
+arxiv_feed_timeout = 60
+
 # arXiv API rate limits  2020-06-16
 # no more than 1 request every 3 seconds, a single connection at a time.
 # https://arxiv.org/help/api/tou
