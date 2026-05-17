@@ -1016,14 +1016,16 @@ def generate_facets_for_urls(text):
     facets = []
 
     for match in url_pattern.finditer(text):
-        start, end = match.start(), match.end()
+        # convert character offsets to UTF-8 byte offsets
+        byte_start = len(text[:match.start()].encode("utf-8"))
+        byte_end = len(text[:match.end()].encode("utf-8"))
         url = match.group()
 
         facets.append(
             {
                 "index": {
-                    "byteStart": start,
-                    "byteEnd": end,
+                    "byteStart": byte_start,
+                    "byteEnd": byte_end,
                 },
                 "features": [
                     {
